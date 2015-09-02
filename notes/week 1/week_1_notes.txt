@@ -10,3 +10,4 @@ Misc. Notes from first day:
 
 Homework
 -Run scripts from chapter 1
+-variables decalred with "var" 
