@@ -1,0 +1,12 @@
+Things to get:
+-Head first javascript programming (book)
+-Advised to use firefox for programming
+
+Misc. Notes from first day:
+-NetBeans will work for PHP and Javascript as well
+
+-W3 Schools
+-Codecademy
+
+Homework
+-Run scripts from chapter 1
