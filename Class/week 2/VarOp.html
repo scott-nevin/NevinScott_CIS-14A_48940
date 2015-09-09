@@ -13,5 +13,53 @@
 </head>
 
 <body>
+<script>
+	//Declare all primitive data types
+	//show different ways to display the same message
+	var ix=1; //int
+	var str="<p> x=" + ix + "</p>"; //string concantenation
+	var str1="<p> x="; //string elements 
+	var str2="</p>";   //string elements
+	var sx="1"; //string
+	var str3=sx+ix; //string math
+	var bx=true; //boolean
+	var by=false;//boolean
+	var fx=3.21e1; //float using scientific notation
+	
+	//output variables - showing 4 different methods for x=1
+	document.write("<p> x=" + ix + "</p>"); //'+' concantenates in javascript, string plus string
+	document.write("<p> x=" , ix , "</p>"); //three separate arguments as opposed to one in the above line
+	document.write(str);                    //another single parameter using the string variable
+	document.write(str1 , ix , str2);       //Three parameters, string, int, string
+	
+	//show string math
+	document.write("<p> x=" , str3 , "</p>");//strings add to make 11
+	
+	//continue outputting variables
+	document.write("<p> bx=" , bx, " by=", by , "</p>"); //boolean
+	document.write(str1 , fx , str2); //float
+	
+	//Future value calculation
+	var pv=100.0; //present value in $
+	var i=0.08; //interest rate
+	var n=9; //number of compounding periods
+	var fv=pv*Math.pow((1+i), n); //calculation
+	//output result
+	document.write("<p> Future Value = $" + fv.toFixed(2) + "</p>"); //formatted for two decimal places
+	
+	//Ternary operator
+	var hours=30; //hours worked
+	var payRate=15; //pay rate in $/hr
+	var payChk=hours*payRate; //normal calculation
+	var dblTme=20; //hours over 20 are double time
+	var payChk2=hours<0?0:
+	     hours<dblTme ? hours * payRate :
+		 dblTme*payRate + 2*(hours-dblTme)*payRate; // if statement for hours worked above 20 getting double time
+	
+	//output paycheck
+    document.write("<p> Paycheck = $" + payChk.toFixed(2) + "</p>");
+	document.write("<p> Double Time Paycheck = $" + payChk2.toFixed(2) + "</p>");
+	
+</script>
 </body>
 </html>
