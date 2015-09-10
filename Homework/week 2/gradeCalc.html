@@ -7,14 +7,32 @@
 /*
 	Scott Nevin
 	Created: 09/09/15
-	Purpose: Input a score and ouput a grade
+	Purpose: Input a score and output a grade
 */
 </script>
 </head>
 
 <body>
 <script>
-	//Javascript code goes here!
+	
+	//Declare variables
+	var score = Math.floor((Math.random() * 100) + 1); //randomly create score 0-100 *Function from w3 schools*
+	var grade = score>=90 ? "A":				//if statement to test score and assign grade
+				score>=80 && score<90 ? "B":
+				score>=70 && score<80 ? "C":
+				score>=60 && score<70 ? "D":"F";
+	var advice =score>=90 ? "Awesome!":				//if statement to assign clever advice
+				score>=80 && score<90 ? "Better than most!": //Pieces of advice start with respective letters
+				score>=70 && score<80 ? "Could be better":
+				score>=60 && score<70 ? "Did you really try?":"Forget school...";	
+	var praise =score>=60 ? " Passed! ":" Failed. "; //decide pass/fail			
+				
+	//output results
+	document.write("<p>Your score = "+score+"</p>"); //Print score
+	document.write("<p>Your grade = "+grade+"</p>"); //Print grade
+	document.write("<p>You"+praise+advice+"</p>");    //Print pass/fail and advice
+	document.write("<p>Refresh the page for a new random grade scenario</p>");
+
 </script>
 </body>
 </html>
