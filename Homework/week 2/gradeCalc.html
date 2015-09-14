@@ -17,11 +17,11 @@
 	
 	//Declare variables
 	var score = Math.floor((Math.random() * 100) + 1); //randomly create score 0-100 *Function from w3 schools*
-	var grade = score>=90 ? "A":				//if statement to test score and assign grade
+	var grade = score>=90 ? "A":                       //if statement to test score and assign grade
 				score>=80 && score<90 ? "B":
 				score>=70 && score<80 ? "C":
 				score>=60 && score<70 ? "D":"F";
-	var praise =score>=60 ? " Passed! ":" Failed. "; //decide pass/fail			
+	var praise =score>=60 ? " Passed! ":" Failed. ";  //decide pass/fail			
 				
 	//output results
 	document.write("<p>Your score = "+score+"</p>"); //Print score
