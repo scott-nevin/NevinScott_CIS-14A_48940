@@ -1,7 +1,8 @@
-Assignment Checklist
+Assignment Checklist for 14 A Javascript
+
 For me to keep track of which assignments I have turned in
-An "X" marks an assignment that HAS been turned in
+An "X" marks an assignment that _HAS_ been turned in
 
 -Assignment 1
--Assignment 2
+-Assignment 2  X
 -Lab 1         X

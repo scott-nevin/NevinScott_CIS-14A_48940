@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Paycheck Calculator Ternary</title>
+<script>
+/*
+	Scott Nevin
+	Created: 09/16/15
+	Purpose: Input hours and get paycheck amount
+*/
+</script>
+</head>
+
+<body>
+	<script>
+		
+		//Declare variables
+		var hours =   prompt("Enter hours worked");
+		var payRate = prompt("Enter rate of pay in $ per hour");
+		var dblTime = payRate * 2;
+		var trplTime = payRate * 3;
+		var pay = 0;
+		
+		//calculate paycheck using switch statement		
+		switch(hours <= 20){
+			case true: pay += hours * payRate;break;
+			case false:
+				switch(hours > 20 && hours < 40){
+					case true: pay += ((hours - 20) * dblTime) + ( 20 * payRate);break;
+					case false:
+						switch(hours >= 40){
+							case true: pay += ((hours - 40) * trplTime) + ( 20 * dblTime) + (20 * payRate);break;
+							case false: pay = "Invalid entries, please retry";break;
+						}
+				}
+				
+		}
+		
+		//output results
+		document.write("<p>Your Hours worked = "+hours+"</p>");      //Print hours 
+		document.write("<p>Your Rate of pay = $"+payRate+"/hr</p>"); //Print pay rate
+		document.write("<p>Your Paycheck = $"+pay+"</p>");           //Print paycheck
+
+	</script>
+</body>
+</html>
