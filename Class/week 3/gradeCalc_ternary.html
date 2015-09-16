@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Grade Calculator Ternary</title>
+<script>
+/*
+	Scott Nevin
+	Created: 09/09/15
+	Purpose: Input a score and output a grade
+*/
+</script>
+</head>
+
+<body>
+<script>
+	
+	//Declare variables
+	var score = Math.floor((Math.random() * 100) + 1); //randomly create score 0-100 *Function from w3 schools*
+	var grade = score <  0   ? "Not a valid score":
+				score <  60  ? "F" :
+				score <  70  ? "D" :
+				score <  80  ? "C" :
+				score <  90  ? "B" :
+				score <= 100 ? "A" :
+					"Not a possible score";
+	var praise = score <  60   ? "You Failed":
+				 score <=100   ? "You passed!":
+					"Refresh for new score";				
+				
+	//output results
+	document.write("<p>Your score = "+score+"</p>"); //Print score
+	document.write("<p>Your grade = "+grade+"</p>"); //Print grade
+	document.write("<p>"+praise+"</p>");    //Print pass/fail 
+	document.write("<p>Refresh the page for a new random grade scenario</p>");
+
+</script>
+</body>
+</html>
