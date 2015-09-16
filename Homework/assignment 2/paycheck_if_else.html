@@ -24,12 +24,15 @@
 		
 		//calculate payckeck using if/else operators
 		if(hours >= 40){
+			//pay        triple time             Double time      Straight time
 			pay += ((hours - 40) * trplTime) + ( 20 * dblTime) + (20 * payRate);
 		}
 		else if(hours > 20 && hours < 40){
+			//pay        Double time           Straight time 
 			pay += ((hours - 20) * dblTime) + ( 20 * payRate);
 		}
 		else if(hours <= 20){
+			//pay   straight time 
 			pay += hours * payRate;
 		}
 		else{
