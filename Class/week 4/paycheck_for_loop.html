@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>Paycheck with Loops - For</title>
+    <script>
+    /*
+        Scott Nevin
+        Created: 09/21/15
+        Purpose: Looping construct practice - For-Loop
+    */
+    </script>
+    </head>
+    
+        <body>
+            <table width="200" border="1">
+            <tr>
+              <th>Hours</th>
+              <th>Paycheck</th>
+            </tr>
+            <script>
+				//decalre variables
+				var payRate= prompt("Calculate your Paycheck table \n Enter Pay Rate in $/hr");
+				var nHours = 85; //total number of hours in table
+				var payChk = 0;  //initialize paycheck to 0
+				var dblTime = 20; //double time starts at 20 hours
+				var trplTime = 40; //triple triple time starts at 40 hours
+				
+				//Populate table using for loop
+				for(var hours = 0;hours<=nHours;hours++){
+					document.write("<tr>");
+					if(hours<=dblTime){
+						payChk=hours*payRate;
+					}
+					else if(hours<trplTime){
+						payChk=dblTime*payRate+(hours-dblTime)*2*payRate;
+					}
+					else{
+						payChk=dblTime*payRate+(20)*(2*payRate)+(hours-trplTime)*3*payRate;
+					}
+						document.write("<td>"+hours+"</td>");
+						document.write("<td>$"+payChk.toFixed(2)+"</td>");
+					document.write("</tr>");
+				}
+			  </script>
+           </table>
+        </body>
+</html>
