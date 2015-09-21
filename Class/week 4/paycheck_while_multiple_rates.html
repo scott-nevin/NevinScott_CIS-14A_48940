@@ -20,14 +20,20 @@
 					var payChk = 0;  //initialize paycheck to 0
 					var dblTime = 20; //double time starts at 20 hours
 					var trplTime = 40; //triple triple time starts at 40 hours
-					var incrmnt = 3; //number of increments for different pay rates
+					var difPay = 4; //number of increments for different pay rates
 					var hours = -1;
+					var col = 0; //column currently being displayed
 			</script>
             <table width="300" border="1">
             <tr>
               <th>Hours</th>
              <script>
 			 	document.write("<th>Pay Check $"+payRate+"/hr</th>");
+			 while(++col<=difPay){
+				 payRate *= 1.0; // make javascript remember that this is an int
+				 payRate += 2.5; //increment different payscales
+			 	document.write("<th>Pay Check $" + payRate + "/hr</th>");
+			 }
 			 </script>
             </tr>
             <script>
