@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>Paycheck with Loops - For</title>
+    <script>
+    /*
+        Scott Nevin
+        Created: 09/23/15
+        Purpose: Looping construct practice - For-Loop
+    */
+    </script>
+    </head>
+    
+        <body>
+            <table width="200" border="1">
+            <tr>
+              <th>Hours</th>
+            <script>
+				//decalre variables
+				var payRtB = 10;   //beginning of pay rate range
+				var payRtE = 20;   //ending of pay rate range
+				var payRtI = 1;    //pay rate increment
+				var nHours = 85;   //total number of hours in table
+				var dblTime = 20;  //double time starts at 20 hours
+				var trplTime = 40; //triple triple time starts at 40 hours
+				
+				//Declare arrays
+				var payRate=[];  //Pay rate range array
+				var hrsWrkd=[]; //Hours worked array
+				var payChk =[]; //Paycheck array
+				
+				//fill pay rate array
+				for(var index=0,rate=payRtB;rate<=payRtE;index++,rate+=payRtI){
+					payRate[index]=rate;
+					payChk[index]=[];
+					document.write("<th>$"+rate+"/hr</th>");
+				}
+				document.write("</tr>");
+				
+				//Fill the 2D arrays with data
+				for(var hours = 0;hours<=nHours;hours++){
+					hrsWrkd[hours]=hours;
+					for(var index=0;index<payRate.length;index++){
+						if(hours<=dblTime){
+							payChk[index][hours]=hours*payRate[index];
+						}
+						else if(hours<trplTime){
+							payChk[index][hours]=dblTime*payRate[index]+(hours-dblTime)*
+								2*payRate[index];
+						}
+						else{
+							payChk[index][hours]=dblTime*payRate[index]+(20)*(2*payRate[index])+
+								(hours-trplTime)*3*payRate[index];
+						}
+					}
+				}
+				
+				//Display arrays of information
+				for(var hours = 0;hours<=nHours;hours++){
+					document.write("<tr>");
+					document.write("<td>"+hrsWrkd[hours]+"</td>");
+						for(var index=0;index<payRate.length;index++){
+							document.write("<td>$"+payChk[index][hours].toFixed(2)+"</td>");
+						}
+					document.write("</tr>");
+				}
+			  </script>
+           </table>
+        </body>
+</html>
