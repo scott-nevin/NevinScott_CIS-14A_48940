@@ -6,4 +6,3 @@
 09/23/15
 
 -same as before, take 1D array problem and create another array for another pay rate
--Homework:
