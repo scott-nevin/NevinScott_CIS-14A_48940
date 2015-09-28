@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>Function Exploration</title>
+    	<script type="text/javascript" src="./functions/savings_functions.js"></script>
+		<script>
+        /*
+            Scott Nevin
+            Created: 09/28/15
+            Purpose: Learn function implementation
+			Including: savings_functions.js
+        */
+        </script>
+     </head>
+        
+        <body>
+			<script>
+                //Declare variables
+				var pv=100;    //Present value in $'s
+				var int=0.06;  //interest rate %
+				var nYears=12; //number of compunding periods (years)
+				
+				//Perform calculation by calling the first function
+				var fv1=save1(pv,int,nYears);
+				var fv2=save2(pv,int,nYears);
+				var fv3=save3(pv,int,nYears);
+				var fv4=save4(pv,int,nYears);
+				var fv5=save5(pv,int,nYears);
+				
+				//display results
+				document.write("<p>Present value   = $"+pv+"</p>");
+				document.write("<p>Interest rate   = "+(int*100)+"%</p>");
+				document.write("<p>Number of Years = "+nYears+"</p>");
+				document.write("<p>Future value 1  = $"+fv1.toFixed(2)+"</p>");
+				document.write("<p>Future value 2  = $"+fv2.toFixed(2)+"</p>");
+				document.write("<p>Future value 3  = $"+fv3.toFixed(2)+"</p>");
+				document.write("<p>Future value 4  = $"+fv4.toFixed(2)+"</p>");
+				display(fv5);
+				
+            </script>
+        </body>
+</html>
+
