@@ -1,0 +1,22 @@
+Regular Expressions Examples
+
+https://regex101.com/r/iC9mE9/1 Scott O'malley (Valid apostraphe)
+
+https://regex101.com/r/iC9mE9/2 Hyphenated last name
+
+https://regex101.com/r/iC9mE9/3 Accepts Hyphenated last name or just a space
+
+https://regex101.com/r/iC9mE9/4 Address
+
+https://regex101.com/r/iC9mE9/5 Zip Code
+
+https://regex101.com/r/iC9mE9/6 Phone number with area code
+
+
+
+
+
+
+
+
+
