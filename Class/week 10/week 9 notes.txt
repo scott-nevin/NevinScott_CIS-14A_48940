@@ -1,0 +1,11 @@
+11/9/15
+
+-Event handling using functions 
+-Looking at communication with local storage
+
+-This makes a button that says "Encrypt" then sends the info to the Encrypt function. Used in forms.
+ -<input type="submit" value="Encrypt" onclick="encrypt()">
+
+-This function goes to a new page in the same tab
+ -location.assign("nextPage".html");
+
