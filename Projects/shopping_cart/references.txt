@@ -1,5 +1,0 @@
-http://www.smashingmagazine.com/2014/02/create-client-side-shopping-cart/
-
-https://code.google.com/p/softecartjs/
-
-http://www.quirksmode.org/js/cookies.html
